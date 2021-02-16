@@ -1,6 +1,6 @@
 const { response } = require('express');
 const express = require('express');
-const { v4: uuidv4 } = require('uuid');
+const { v4: uuidv4, isUuid } = require('uuid');
 
 const app = express();
 
@@ -16,8 +16,17 @@ function logRequests(request, response, next) {
 }
 
 function validateProjectId(request, response, next) {
-  
+  const { id } = request.params;
+
+  if(!isUuid(id)) {
+    return response.status(400).json({error: 'Invalid project ID' })
+  }
+
+  return next();
 }
+
+app.use(logRequests);
+app.use('/projects/:id', validateProjectId);         //outra forma de validar um middleware
 
 app.get('/projects', (request, response) => {
   const { title } = request.query
