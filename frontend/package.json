@@ -5,6 +5,10 @@
   "repository": "https://github.com/polyanetuag/testes_React.git",
   "author": "Polyane Tuag <pollyportugues@hotmail.com>",
   "license": "MIT",
+  "scripts": {
+    "dev": "webpack-dev-server --mode development",
+    "build": "webpack --mode production"
+  },
   "dependencies": {
     "@babel/cli": "^7.12.17",
     "@babel/core": "^7.12.17",
