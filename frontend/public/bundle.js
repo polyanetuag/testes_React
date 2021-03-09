@@ -15,7 +15,7 @@
   \**********************/
 /***/ (() => {
 
-eval("var soma = function soma(a, b) {\n  return a + b;\n};\n\nconsole.log(soma(1, 3));\n\n//# sourceURL=webpack://testes_React/./src/index.js?");
+eval("var soma = function soma(a, b) {\n  return a + b;\n};\n\nconsole.log(soma(1, 3));\n\n//# sourceURL=webpack://testes-react/./src/index.js?");
 
 /***/ })
 
