@@ -4,7 +4,8 @@ import Header from './components/Header';
 function App() {
   return (
     <>
-      <Header />
+      <Header title= "Homepage" />
+      <Header title= "Projects" />
     </> 
   )
 }
